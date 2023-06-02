@@ -1,0 +1,53 @@
+{
+  "generator-ngx-rocket": {
+    "version": "11.0.0",
+    "props": {
+      "location": "path",
+      "strict": true,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "target": [
+        "web",
+        "cordova",
+        "electron"
+      ],
+      "mobile": [
+        "ios",
+        "android"
+      ],
+      "desktop": [
+        "windows"
+      ],
+      "ui": "bootstrap",
+      "features": [
+        "pwa",
+        "auth",
+        "lazy",
+        "cypress"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "tools": [
+        "prettier",
+        "hads"
+      ],
+      "utility": [
+        "lodash",
+        "moment"
+      ],
+      "deploy": "azure",
+      "appName": "extractify",
+      "projectName": "extractify",
+      "packageManager": "npm",
+      "pwa": true,
+      "auth": true,
+      "lazy": true,
+      "e2e": false,
+      "cypress": true,
+      "angulartics": false
+    }
+  }
+}

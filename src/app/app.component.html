@@ -1,0 +1,350 @@
+<nav class="navbar navbar-light navbar-expand-md" style="background: var(--bs-primary)">
+  <div class="container-fluid">
+    <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+      <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+    </button><img src="assets/img/Extractify.png" width="46" height="46" />
+    <div class="collapse navbar-collapse" id="navcol-1">
+      <ul class="navbar-nav">
+        <li class="nav-item"></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main></main>
+<!-- Start: Features Centered Icons -->
+<div class="container py-4 py-xl-5">
+  <div class="row mb-5">
+    <div class="col-md-12 col-xl-6 text-center mx-auto">
+      <h2>Extractify</h2>
+      <p>Your one-stop KYC solution</p>
+      Enter your API key : <input type="password" [(ngModel)]="key" />
+    </div>
+  </div>
+  <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" style="background: var(--bs-white)">
+    <div class="col" style="padding-bottom: 0px">
+      <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
+        <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 -32 576 576"
+               width="1em"
+               height="1em"
+               fill="currentColor"
+               style="font-size: 32px">
+            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+            <path d="M368 344h96c13.25 0 24-10.75 24-24s-10.75-24-24-24h-96c-13.25 0-24 10.75-24 24S354.8 344 368 344zM208 320c35.35 0 64-28.65 64-64c0-35.35-28.65-64-64-64s-64 28.65-64 64C144 291.3 172.7 320 208 320zM512 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h448c35.35 0 64-28.65 64-64V96C576 60.65 547.3 32 512 32zM528 416c0 8.822-7.178 16-16 16h-192c0-44.18-35.82-80-80-80h-64C131.8 352 96 387.8 96 432H64c-8.822 0-16-7.178-16-16V160h480V416zM368 264h96c13.25 0 24-10.75 24-24s-10.75-24-24-24h-96c-13.25 0-24 10.75-24 24S354.8 264 368 264z"></path>
+          </svg>
+        </div>
+        <div class="px-3">
+          <h4>PAN</h4>
+          <p>Upload .pdf or .jpeg file</p>
+          <input type="file"
+                 style="
+              padding-right: 0px;
+              margin: 0;
+              margin-right: -22px;
+              color: var(--bs-primary);
+              background: var(--bs-body-bg);
+              transform: translate(37px);"
+                 (change)="onFileSelected('pan_model', $event)" />
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
+        <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 -32 576 576"
+               width="1em"
+               height="1em"
+               fill="currentColor"
+               style="font-size: 36px">
+            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+            <path d="M208 256c35.35 0 64-28.65 64-64c0-35.35-28.65-64-64-64s-64 28.65-64 64C144 227.3 172.7 256 208 256zM464 232h-96c-13.25 0-24 10.75-24 24s10.75 24 24 24h96c13.25 0 24-10.75 24-24S477.3 232 464 232zM240 288h-64C131.8 288 96 323.8 96 368C96 376.8 103.2 384 112 384h192c8.836 0 16-7.164 16-16C320 323.8 284.2 288 240 288zM464 152h-96c-13.25 0-24 10.75-24 24s10.75 24 24 24h96c13.25 0 24-10.75 24-24S477.3 152 464 152zM512 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h448c35.35 0 64-28.65 64-64V96C576 60.65 547.3 32 512 32zM528 416c0 8.822-7.178 16-16 16H64c-8.822 0-16-7.178-16-16V96c0-8.822 7.178-16 16-16h448c8.822 0 16 7.178 16 16V416z"></path>
+          </svg>
+        </div>
+        <div class="px-3">
+          <h4>Aadhar</h4>
+          <p>Upload .pdf or .jpeg file</p>
+          <input #aadharFile type="file"
+                 style="padding-right: 0px;margin: 0;margin-right: -22px;color: var(--bs-primary);background: var(--bs-body-bg);transform: translate(37px)"
+                 (change)="onFileSelected('aadhar_model', $event)"/>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
+        <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon">
+          <!--<svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 20 20"
+               width="1em"
+               height="1em"
+               fill="currentColor"
+               style="font-size: 36px">
+            <path d="M15.475,6.692l-4.084-4.083C11.32,2.538,11.223,2.5,11.125,2.5h-6c-0.413,0-0.75,0.337-0.75,0.75v13.5c0,0.412,0.337,0.75,0.75,0.75h9.75c0.412,0,0.75-0.338,0.75-0.75V6.94C15.609,6.839,15.554,6.771,15.475,6.692 M11.5,3.779l2.843,2.846H11.5V3.779z M14.875,16.75h-9.75V3.25h5.625V7c0,0.206,0.168,0.375,0.375,0.375h3.75V16.75z"></path>
+          </svg>-->
+          <i class="la la-file-text-o" style="font-size: 40px"></i>
+        </div>
+        <div class="px-3">
+          <h4>GST</h4>
+          <p>Upload .pdf or .jpeg file</p>
+          <input type="file"
+                 style="
+              padding-right: 0px;
+              margin: 0;
+              margin-right: -22px;
+              color: var(--bs-primary);
+              background: var(--bs-body-bg);
+              transform: translate(37px);"
+                 (change)="onFileSelected('gst_model_1', $event)" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End: Features Centered Icons -->
+<!-- Start: Extracted Information -->
+<div class="container">
+  <div class="col-md-8 col-xl-6 text-center mx-auto">
+    <div [hidden]="!isLoading" class="text-xs-center">
+      <i class="fas fa-cog fa-spin fa-3x"></i> <span>{{ message }}</span>
+    </div>
+    <h3 class="text-center mx-auto">Extracted Information</h3>
+  </div>
+  <!-- Start: PAN  -->
+  <h4 #panElement>PAN card details</h4>
+  <form>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Name.:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ pan.Name }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Father's Name.:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ pan.FatherName }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">DOB:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ pan.DOB }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">PAN:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ pan.PAN }}" />
+      </div>
+    </div>
+  </form>
+  <!-- End: PAN  -->
+  <!-- Start: Aadhar  -->
+  <br />
+  <h4 #aadharElement>Aadhar card details</h4>
+  <form>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Name.:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ aadhar.Name }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">DOB:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ aadhar.DOB }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Gender:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ aadhar.Gender }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Aadhar No.:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ aadhar.AadharNum }}" />
+      </div>
+    </div>
+  </form>
+  <!-- End: Aadhar  -->
+  <!-- Start: GST  -->
+  <br />
+  <h4 #gstElement>GST certificate details</h4>
+  <form>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Registration No.:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ gst.RegistrationNum }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Legal Name:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ gst.LegalName }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Trade Name:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ gst.TradeName }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Constitution of Business:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ gst.ConstitutionOfBusiness }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Address:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text-area" value="{{ gst.Address }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Date of Liability:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ gst.DateOfLiability }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Period of Validity:</label>
+      </div>
+      <div class="col-xl-2" style="width: 100px">
+        <label class="col-form-label" style="font-size: 19px">From:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ gst.From }}" />
+      </div>
+      <div class="col-xl-2" style="width: 100px">
+        <label class="col-form-label" style="font-size: 19px">To:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ gst.To }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Type of Registration:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ gst.Type }}" />
+      </div>
+    </div>
+    <div class="row" style="width: 897px">
+      <div class="col-xl-2" style="width: 250px">
+        <label class="col-form-label" style="font-size: 19px">Date of Issue:</label>
+      </div>
+      <div class="col" style="width: 430px">
+        <input class="form-control" readonly type="text" value="{{ gst.DOI }}" />
+      </div>
+    </div>
+  </form>
+  <!-- End: GST  -->
+</div>
+<!-- End: Extracted Information -->
+<!-- Start: Footer -->
+<footer>
+  <div class="container py-4 py-lg-5">
+    <div class="row justify-content-center">
+      <!-- Start: Services -->
+      <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+        <h3 class="fs-6">Services</h3>
+        <ul class="list-unstyled">
+          <li>PAN card OCR</li>
+          <li>Aadhar card OCR</li>
+          <li>GST certificate OCR</li>
+        </ul>
+      </div>
+      <!-- End: Services -->
+      <!-- Start: About -->
+      <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+        <h3 class="fs-6">Project</h3>
+        <ul class="list-unstyled">
+          <li>
+            <a href="" target="_blank">Github Repository</a>
+          </li>
+          <li>
+            <a href="" target="_blank">Demo Video</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End: About -->
+      <!-- Start: Contact -->
+      <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+        <h3 class="fs-6">Contact</h3>
+        <ul class="list-unstyled">
+          <li>Vridhi Sachdev</li>
+          <li>
+            <a href="mailto:vridhi.ritesh.sachdev@gmail.com" target="_blank">
+              <i style="font-size: 24px" class="fa" style="font-size: 25px; color: var(--bs-gray-900)">&#xf0e0;</i>
+            </a>
+            <a href="https://www.linkedin.com/in/vridhisachdev/" target="_blank">
+              <i class="fab fa-linkedin" style="font-size: 25px; color: var(--bs-gray-900)"></i>
+            </a>
+            <a href="https://github.com/wickedseer" target="_blank">
+              <i class="fab fa-github" style="font-size: 25px; color: var(--bs-gray-900)"></i>
+            </a>
+          </li>
+          <li>for API key</li>
+        </ul>
+      </div>
+      <!-- End: Contact -->
+      <!-- Start: Extractify -->
+      <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
+        <div class="fw-bold d-flex align-items-center mb-2">
+          <img width="39"
+               height="39"
+               src="assets/img/Extractify.png"
+               style="
+              border-top-left-radius: 6px;
+              border-top-right-radius: 6px;
+              border-bottom-right-radius: 6px;
+              border-bottom-left-radius: 6px;
+            " /><span style="transform: translate(4px)">Extractify</span>
+        </div>
+        <p>Extracting and validating your KYC information from documents</p>
+      </div>
+      <!-- End: Extractify -->
+    </div>
+    <hr />
+    <div class="d-flex justify-content-between align-items-center pt-3">
+      <p class="text-muted mb-0">Copyright © 2023 Extractify</p>
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item"></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!-- End: Footer -->
