@@ -1,4 +1,4 @@
-# Extractify - Your one top KYC solution
+# Extractify - Your one stop KYC solution
 
 ## Problem Statement
 
@@ -14,9 +14,8 @@ In conclusion, Azure KYC solution offers a comprehensive and efficient way for b
 
 ## Azure Servcies Used
 
-- Static Web Apps
-- Form Recognizer Service
-- Blob Storage
+- [Static Web Apps](https://learn.microsoft.com/en-us/azure/static-web-apps/)
+- [Form Recognizer Service](https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/overview?view=form-recog-3.0.0)
 
 ## Website UI
 
@@ -28,6 +27,3 @@ In conclusion, Azure KYC solution offers a comprehensive and efficient way for b
 - [ng-bootsrap](https://ng-bootstrap.github.io/)
 - [Font Awesome](http://fontawesome.io)
 - [RxJS](http://reactivex.io/rxjs)
-- [ngx-translate](https://github.com/ngx-translate/core)
-- [Lodash](https://lodash.com)
-- [Moment.js](https://momentjs.com)
