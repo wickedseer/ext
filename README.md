@@ -50,6 +50,7 @@ to automate the extraction of important information from the scanned copies of A
 ## Project Development Roadmap
 # Additional Details
 ## Live Demo
+You can find a running system to test [here](https://blue-hill-02f50f400.3.azurestaticapps.net/)
 
 
 
