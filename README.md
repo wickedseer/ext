@@ -41,6 +41,7 @@ to automate the extraction of important data from the scanned copies of Aadhar c
 ![screenshot (3)](https://github.com/wickedseer/ext/assets/84715134/31544cc5-d133-4619-b348-7167063226c4)
 
 ### Demo Video
+https://github.com/wickedseer/ext/assets/84715134/f3bb8e7c-43a6-4374-8737-43c5722c59e2
 
 ### Live Demo
 You can find a running system to test [here](https://blue-hill-02f50f400.3.azurestaticapps.net/)
