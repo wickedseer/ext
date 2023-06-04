@@ -1,4 +1,4 @@
-# Extractify - AI Powered Extraction. Simplified.
+# Extractify: AI Powered Extraction. Simplified
 
 ## Table of Contents
 
