@@ -38,6 +38,7 @@ to automate the extraction of important data from the scanned copies of Aadhar c
 ## Presentation Materials
 
 ### Website UI
+![screenshot (3)](https://github.com/wickedseer/ext/assets/84715134/31544cc5-d133-4619-b348-7167063226c4)
 
 ### Demo Video
 
