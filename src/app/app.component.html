@@ -17,7 +17,7 @@
     <div class="col-md-12 col-xl-6 text-center mx-auto">
       <h2>Extractify</h2>
       <p>Your one-stop KYC solution</p>
-      Enter your API key : <input type="password" [(ngModel)]="key" />
+      Enter API key : <input type="password" [(ngModel)]="key" />
     </div>
   </div>
   <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" style="background: var(--bs-white)">
@@ -102,176 +102,189 @@
   </div>
 </div>
 <!-- End: Features Centered Icons -->
-<!-- Start: Extracted Information -->
 <div class="container">
   <div class="col-md-8 col-xl-6 text-center mx-auto">
     <div [hidden]="!isLoading" class="text-xs-center">
-      <i class="fas fa-cog fa-spin fa-3x"></i> <span>{{ message }}</span>
+      <i class="fas fa-cog fa-spin fa-3x"></i>
+      <p>{{ message }}</p>
     </div>
-    <h3 class="text-center mx-auto">Extracted Information</h3>
+    <div class="col-md-12 col-xl-6text-center mx-auto">
+      <h3>Extracted Information</h3>
+    </div>          
   </div>
-  <!-- Start: PAN  -->
-  <h4 #panElement>PAN card details</h4>
-  <form>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Name.:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ pan.Name }}" />
+</div>
+<!-- Start: Extracted Information -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-xl-1"></div>
+    <div class="col-md-4 col-xl-8 offset-xl-0">
+      <div class="container">
+        <!-- Start: PAN  -->
+        <h4 #panElement>PAN card details</h4>
+        <form>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Name.:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ pan.Name }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Father's Name.:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ pan.FatherName }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">DOB:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ pan.DOB }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">PAN:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ pan.PAN }}" />
+            </div>
+          </div>
+        </form>
+        <!-- End: PAN  -->
+        <!-- Start: Aadhar  -->
+        <br />
+        <h4 #aadharElement>Aadhar card details</h4>
+        <form>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Name.:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ aadhar.Name }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">DOB:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ aadhar.DOB }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Gender:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ aadhar.Gender }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Aadhar No.:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ aadhar.AadharNum }}" />
+            </div>
+          </div>
+        </form>
+        <!-- End: Aadhar  -->
+        <!-- Start: GST  -->
+        <br />
+        <h4 #gstElement>GST certificate details</h4>
+        <form>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Registration No.:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ gst.RegistrationNum }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Legal Name:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ gst.LegalName }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Trade Name:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ gst.TradeName }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Constitution of Business:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ gst.ConstitutionOfBusiness }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Address:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text-area" value="{{ gst.Address }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Date of Liability:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ gst.DateOfLiability }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Period of Validity:</label>
+            </div>
+            <div class="col-xl-2" style="width: 100px">
+              <label class="col-form-label" style="font-size: 19px">From:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ gst.From }}" />
+            </div>
+            <div class="col-xl-2" style="width: 100px">
+              <label class="col-form-label" style="font-size: 19px">To:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ gst.To }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Type of Registration:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ gst.Type }}" />
+            </div>
+          </div>
+          <div class="row" style="width: 897px">
+            <div class="col-xl-2" style="width: 250px">
+              <label class="col-form-label" style="font-size: 19px">Date of Issue:</label>
+            </div>
+            <div class="col" style="width: 430px">
+              <input class="form-control" readonly type="text" value="{{ gst.DOI }}" />
+            </div>
+          </div>
+        </form>
+        <!-- End: GST  -->
       </div>
     </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Father's Name.:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ pan.FatherName }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">DOB:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ pan.DOB }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">PAN:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ pan.PAN }}" />
-      </div>
-    </div>
-  </form>
-  <!-- End: PAN  -->
-  <!-- Start: Aadhar  -->
-  <br />
-  <h4 #aadharElement>Aadhar card details</h4>
-  <form>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Name.:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ aadhar.Name }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">DOB:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ aadhar.DOB }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Gender:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ aadhar.Gender }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Aadhar No.:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ aadhar.AadharNum }}" />
-      </div>
-    </div>
-  </form>
-  <!-- End: Aadhar  -->
-  <!-- Start: GST  -->
-  <br />
-  <h4 #gstElement>GST certificate details</h4>
-  <form>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Registration No.:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ gst.RegistrationNum }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Legal Name:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ gst.LegalName }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Trade Name:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ gst.TradeName }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Constitution of Business:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ gst.ConstitutionOfBusiness }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Address:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text-area" value="{{ gst.Address }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Date of Liability:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ gst.DateOfLiability }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Period of Validity:</label>
-      </div>
-      <div class="col-xl-2" style="width: 100px">
-        <label class="col-form-label" style="font-size: 19px">From:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ gst.From }}" />
-      </div>
-      <div class="col-xl-2" style="width: 100px">
-        <label class="col-form-label" style="font-size: 19px">To:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ gst.To }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Type of Registration:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ gst.Type }}" />
-      </div>
-    </div>
-    <div class="row" style="width: 897px">
-      <div class="col-xl-2" style="width: 250px">
-        <label class="col-form-label" style="font-size: 19px">Date of Issue:</label>
-      </div>
-      <div class="col" style="width: 430px">
-        <input class="form-control" readonly type="text" value="{{ gst.DOI }}" />
-      </div>
-    </div>
-  </form>
-  <!-- End: GST  -->
+    <div class="col-md-4 col-xl-1"></div>
+  </div>
 </div>
 <!-- End: Extracted Information -->
 <!-- Start: Footer -->
@@ -293,7 +306,7 @@
         <h3 class="fs-6">Project</h3>
         <ul class="list-unstyled">
           <li>
-            <a href="" target="_blank">Github Repository</a>
+            <a href="https://github.com/wickedseer/ext" target="_blank">Github Repository</a>
           </li>
           <li>
             <a href="" target="_blank">Demo Video</a>

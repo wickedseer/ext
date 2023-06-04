@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, OnDestroy {
   pan: any = {};
   aadhar: any = {};
   isLoading: boolean = false;
-  message: string = "Please wait...";
+  message: string = "Processing...";
 
   constructor(
     private renderer: Renderer2,
