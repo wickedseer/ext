@@ -26,6 +26,8 @@ export class AppComponent implements OnInit, OnDestroy {
   @ViewChild('aadharElement', { static: false }) aadharElementRef: ElementRef | undefined;
   @ViewChild('panElement', { static: false }) panElementRef: ElementRef | undefined;
   @ViewChild('aadharFile', { static: false }) aadharFile: ElementRef | undefined;
+  @ViewChild('gstFile', { static: false }) gstFile: ElementRef | undefined;
+  @ViewChild('panFile', { static: false }) panFile: ElementRef | undefined;
 
   key: string = '';
   endpoint: string = 'https://form-recognizer-extractify.cognitiveservices.azure.com/';
@@ -108,6 +110,16 @@ export class AppComponent implements OnInit, OnDestroy {
 
     if (this.key.length == 0 || !file) {
       Swal.fire('Alert!', 'Enter API key', 'warning');
+      if (this.aadharFile) {
+        this.aadharFile.nativeElement.value = "";
+      }
+      if (this.panFile) {
+        this.panFile.nativeElement.value = "";
+      }
+      if (this.gstFile) {
+        this.gstFile.nativeElement.value = "";
+      }
+
     } else {
       this.isLoading = true;
 
@@ -143,6 +155,10 @@ export class AppComponent implements OnInit, OnDestroy {
         this.gst.To = doc.fields.To.value || '';
         this.gst.TradeName = doc.fields.TradeName.value || '';
         this.gst.Type = doc.fields.Type.value || '';
+
+        if (this.gstFile) {
+          this.gstFile.nativeElement.value = "";
+        }
       }
 
       else if (model == 'pan_model') {
@@ -157,6 +173,10 @@ export class AppComponent implements OnInit, OnDestroy {
         this.pan.FatherName = doc.fields.FatherName.value || '';
         this.pan.DOB = doc.fields.DOB.value || '';
         this.pan.PAN = doc.fields.PAN.value || '';
+
+        if (this.panFile) {
+          this.panFile.nativeElement.value = "";
+        }
       }
 
       else if (model == 'aadhar_model') {
