@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1685872754016,
+  "timestamp": 1685875080942,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -62,7 +62,7 @@
     "/fa-solid-900.woff2": "6b99aa650bd12a36caa14e0127435d8f4cd3ba73",
     "/favicon.ico": "b65083d46bbf63692d5d2cdd69622e6d7ecae317",
     "/index.html": "99f49969707db4eaa442e5e93712a3e653578f15",
-    "/main.js": "804dde67dcc86b36a85e76d6992c3b800c40c601",
+    "/main.js": "e562e9501bc7d15a39110dfd378b818d09afec2d",
     "/manifest.webmanifest": "c9d5e61f5e500b312cde49de02525d062dbccdb8",
     "/polyfills.js": "bf205786bba022bbf595541893e691cd249043d1",
     "/runtime.js": "56de68061e0156e4b400321f3fc4671fd198b937",
